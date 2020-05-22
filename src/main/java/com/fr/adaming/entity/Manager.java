@@ -21,9 +21,9 @@ public class Manager extends Profile {
 	}
 
  
-	public Manager( String nom, String prenom, Integer cin, String email, Integer telephone, String adresse, 
+	public Manager( String nom, String prenom, Integer cin, String email, Integer telephone, String adresse, String image,
 			String username, String password, Date dateDeNaissance, Collection<AppRole> roles) {
-		super( nom, prenom, cin, email, telephone, adresse, username, password, dateDeNaissance, roles);
+		super( nom, prenom, cin, email, telephone, adresse,image, username, password, dateDeNaissance, roles);
 		// TODO Auto-generated constructor stub
 	}
  

@@ -34,10 +34,10 @@ public class Employe extends Profile{
 
  
  
-	public Employe( String nom, String prenom, Integer cin, String email, Integer telephone, String adresse, 
+	public Employe( String nom, String prenom, Integer cin, String email, Integer telephone, String adresse,String image, 
 			String username, String password, Date dateDeNaissance, Collection<AppRole> roles) {
 		
-		super( nom, prenom, cin, email, telephone, adresse , username, password, dateDeNaissance, roles);
+		super( nom, prenom, cin, email, telephone, adresse ,image, username, password, dateDeNaissance, roles);
 		// TODO Auto-generated constructor stub
 	}
 	
@@ -51,14 +51,14 @@ public class Employe extends Profile{
 	}
 
 
+
 	@Override
 	public String toString() {
-		return "Employe [idProfile=" + idProfile + ", nom=" + nom + ", prenom=" + prenom + ", cin=" + cin + ", email="
-				+ email + ", telephone=" + telephone + ", adresse=" + adresse + ", username=" + username + ", password="
-				+ password + ", dateDeNaissance=" + dateDeNaissance + ", roles=" + roles + "]";
+		return "Employe [FicheDePaies=" + FicheDePaies + "]";
 	}
 
 
+ 
 	 
 
  

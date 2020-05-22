@@ -16,7 +16,6 @@ import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
-import javax.persistence.Lob;
 import javax.persistence.ManyToMany;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -36,6 +35,7 @@ public class Profile implements Serializable {
 	protected String nom;
 	protected String prenom;
 	protected Integer cin;
+	protected String image;
 
 	protected String email;
 	protected Integer telephone;
@@ -72,7 +72,7 @@ public class Profile implements Serializable {
 		this.password = password;
 		this.roles = roles;
 	}
-	public Profile(String nom, String prenom, Integer cin, String email, Integer telephone, String adresse,
+	public Profile(String nom, String prenom, Integer cin, String email, Integer telephone, String adresse,String image,
 	String username, String password, Date dateDeNaissance, Collection<AppRole> roles) {
 			this.nom = nom;
 			this.prenom = prenom;
@@ -84,6 +84,8 @@ public class Profile implements Serializable {
 			this.password = password;
 			this.dateDeNaissance = dateDeNaissance;
 			this.roles = roles;
+			this.image = image;
+
 			}
 	
  
@@ -176,11 +178,28 @@ public class Profile implements Serializable {
 		this.roles = roles;
 	}
 
+
+
+	public String getImage() {
+		return image;
+	}
+
+
+
+	public void setImage(String image) {
+		this.image = image;
+	}
+
+
+
 	@Override
 	public String toString() {
-		return "Profile [idProfile=" + idProfile + ", nom=" + nom + ", prenom=" + prenom + ", cin=" + cin + ", email="
-				+ email + ", telephone=" + telephone + ", adresse=" + adresse + ", username=" + username + ", password="
-				+ password + ", dateDeNaissance=" + dateDeNaissance + ", roles=" + roles + "]";
+		return "Profile [idProfile=" + idProfile + ", nom=" + nom + ", prenom=" + prenom + ", cin=" + cin + ", image="
+				+ image + ", email=" + email + ", telephone=" + telephone + ", adresse=" + adresse + ", username="
+				+ username + ", password=" + password + ", dateDeNaissance=" + dateDeNaissance + ", roles=" + roles
+				+ "]";
 	}
+
+	 
 
 }

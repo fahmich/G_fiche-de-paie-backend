@@ -43,7 +43,7 @@ public class EmployeController {
 		Profile emp = profileService.saveProfil(
 				new Employe(employe.getNom(), employe.getPrenom(),
 							employe.getCin(),employe.getEmail(), 
-							employe.getTelephone(), employe.getAdresse(),
+							employe.getTelephone(), employe.getAdresse(),employe.getImage(),
 							employe.getUsername(),employe.getPassword(), 
 							employe.getDateDeNaissance(), roles));
 		
